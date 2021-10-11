@@ -1,0 +1,38 @@
+2021-10-08T10:41:01+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php:93
+Stack trace:
+#0 C:\domains\vigor-crossfit\wp-includes\template-loader.php(106): include()
+#1 C:\domains\vigor-crossfit\wp-blog-header.php(19): require_once('C:\\domains\\vigo...')
+#2 C:\domains\vigor-crossfit\index.php(17): require('C:\\domains\\vigo...')
+#3 {main}
+  thrown in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php on line 93
+
+2021-10-08T10:41:21+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php:93
+Stack trace:
+#0 C:\domains\vigor-crossfit\wp-includes\template-loader.php(106): include()
+#1 C:\domains\vigor-crossfit\wp-blog-header.php(19): require_once('C:\\domains\\vigo...')
+#2 C:\domains\vigor-crossfit\index.php(17): require('C:\\domains\\vigo...')
+#3 {main}
+  thrown in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php on line 93
+
+2021-10-08T10:51:04+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php:93
+Stack trace:
+#0 C:\domains\vigor-crossfit\wp-includes\template-loader.php(106): include()
+#1 C:\domains\vigor-crossfit\wp-blog-header.php(19): require_once('C:\\domains\\vigo...')
+#2 C:\domains\vigor-crossfit\index.php(17): require('C:\\domains\\vigo...')
+#3 {main}
+  thrown in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php on line 93
+
+2021-10-08T10:53:06+00:00 CRITICAL Uncaught Error: Cannot use object of type WC_Product_Simple as array in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php:93
+Stack trace:
+#0 C:\domains\vigor-crossfit\wp-includes\template-loader.php(106): include()
+#1 C:\domains\vigor-crossfit\wp-blog-header.php(19): require_once('C:\\domains\\vigo...')
+#2 C:\domains\vigor-crossfit\index.php(17): require('C:\\domains\\vigo...')
+#3 {main}
+  thrown in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php on line 93
+
+2021-10-08T10:53:26+00:00 CRITICAL Cannot use [] for reading in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php on line 93
+
+2021-10-08T10:57:55+00:00 CRITICAL syntax error, unexpected '?>' in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php on line 106
+
+2021-10-08T11:22:46+00:00 CRITICAL syntax error, unexpected ')' in C:\domains\vigor-crossfit\wp-content\themes\vigor-crossfit\page-templates\tmp-home.php on line 105
+

@@ -1,0 +1,94 @@
+.plan {
+  margin: rem-calc(5);
+  border: 1px solid rgba(151, 151, 151, 0.198181);
+  background-color: $white;
+  padding: rem-calc(30 50 20);
+  width: rem-calc(416);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.36s ease;
+  @include breakpoint(medium up) {
+    width: calc(100% / 3 - 10px);
+    min-width: rem-calc(380);
+  }
+  @include breakpoint(small down) {
+    padding: rem-calc(30 30 16);
+    text-align: left;
+    width: rem-calc(380);
+  }
+
+  &:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+
+  .button {
+    width: rem-calc(230);
+    max-width: 100%;
+    text-transform: none;
+    margin: auto auto 4px;
+    display: block;
+  }
+
+  &__title {
+    font-size: rem-calc(26);
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: rem-calc(36);
+    margin-bottom: rem-calc(41);
+    @include breakpoint(small down) {
+      font-size: rem-calc(20);
+      text-transform: uppercase;
+      line-height: 1.4;
+      margin-bottom: rem-calc(15);
+    }
+  }
+
+  &__text {
+    @include breakpoint(small down) {
+      font-size: rem-calc(17);
+    }
+    @include breakpoint(medium up) {
+      margin-bottom: rem-calc(30);
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+
+      li {
+        position: relative;
+        padding-right: rem-calc(25);
+        @include breakpoint(medium up) {
+          margin-bottom: rem-calc(6);
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translate(-50%, -50%);
+          width: rem-calc(17);
+          height: rem-calc(13);
+          background-image: url("../img/checkmark-red.svg");
+          background-repeat: no-repeat;
+          background-position: 0 0;
+        }
+
+        &:nth-child(-n+5) {
+          &:before {
+            background-image: url("../img/сheckmark-orange.svg");
+          }
+        }
+
+        &:nth-child(-n+3) {
+          &:before {
+            background-image: url("../img/сheckmark.svg");
+          }
+        }
+      }
+    }
+  }
+}

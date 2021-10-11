@@ -1,0 +1,157 @@
+.home-main {
+  .section {
+    &--goal {
+      @include breakpoint(large) {
+        padding: rem-calc(166 0 130);
+      }
+
+      .section {
+        &__title {
+          max-width: 100%;
+          margin-bottom: rem-calc(30);
+          @include breakpoint(large) {
+            text-align: left;
+            margin-bottom: 0;
+          }
+        }
+
+        &__text {
+          max-width: 100%;
+          text-align: center;
+          @include breakpoint(large) {
+            width: rem-calc(476);
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    &--coaches {
+      padding: 0;
+      position: relative;
+
+      .section {
+        &__title {
+          text-align: center;
+          @include breakpoint(medium up) {
+            margin-bottom: rem-calc(26);
+          }
+        }
+
+        &__text {
+          text-align: center;
+
+        }
+      }
+
+      .slider-caption {
+        position: absolute;
+        z-index: 9;
+        top: rem-calc(44);
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: rem-calc(595);
+        max-width: 100%;
+        @include breakpoint(small down) {
+          position: relative;
+          color: $black;
+          padding-bottom: rem-calc(40);
+          top: 0;
+        }
+      }
+
+      .slider {
+        &__item {
+          height: 733px;
+          max-height: 70vw;
+          position: relative;
+          @include breakpoint(small down) {
+            max-height: 400px;
+          }
+
+          .img {
+            object-fit: cover;
+            height: 100%;
+          }
+
+          .item-caption {
+            position: absolute;
+            bottom: 10%;
+            z-index: 9;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: rem-calc(455);
+            max-width: 100%;
+            padding: rem-calc(0 10);
+            @include breakpoint(small down) {
+              bottom: rem-calc(50);
+            }
+
+            &__title {
+              font-size: rem-calc(20);
+              font-weight: 600;
+              margin-bottom: rem-calc(13);
+            }
+
+            &__text,
+            &__link {
+              font-size: rem-calc(16);
+              line-height: rem-calc(24);
+            }
+
+            &__link {
+              margin-top: rem-calc(24);
+              text-transform: uppercase;
+              font-weight: 600;
+              display: block;
+              @include breakpoint(small down) {
+                margin-top: rem-calc(10);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--plans {
+      .plans {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: rem-calc(-5);
+        margin-right: rem-calc(-5);
+      }
+
+      .section {
+        &__title {
+          margin-bottom: rem-calc(30);
+          @include breakpoint(medium up) {
+            margin-bottom: rem-calc(96);
+          }
+        }
+      }
+    }
+
+    &--map {
+      padding: rem-calc(24 0 0);
+      position: relative;
+
+      .section {
+        &__title {
+          font-weight: 700;
+
+          @include breakpoint(medium up) {
+            position: absolute;
+            top: rem-calc(84);
+            left: 50%;
+            z-index: 9;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+}

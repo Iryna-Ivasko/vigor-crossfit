@@ -1,0 +1,117 @@
+/* Navigation breakpoints */
+
+.desktop-menu, .top-bar-left {
+  @include breakpoint(medium down) {
+    display: none;
+  }
+}
+
+
+#mobile-menu, .title-bar {
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+// Mobile menu
+.mobile-menu {
+  display: none; // prevents repaint caused by JS hiding menu onload
+}
+
+.off-canvas {
+  > ul.menu {
+    height: 100vh;
+    padding: 1rem;
+
+    a {
+      color: $white;
+      font-size: rem-calc(15);
+      @include breakpoint(small down) {
+        padding: rem-calc(10);
+      }
+    }
+  }
+
+  .menu .active > a {
+    color: $primary-color;
+  }
+}
+
+// Tablet and desktop menu
+
+.top-bar {
+  position: relative;
+
+  .menu a {
+    color: $white;
+    line-height: rem-calc(24);
+    margin: rem-calc(0 6);
+    text-transform: uppercase;
+    font-size: rem-calc(16);
+
+    &:hover:not(.button) {
+      opacity: 0.7;
+    }
+  }
+
+  .menu .active > a {
+    border-bottom: 2px solid $white;
+  }
+
+
+  .dropdown.menu .submenu {
+    border: 0;
+  }
+
+  .dropdown.menu .has-submenu.is-down-arrow a {
+    padding-right: 1rem;
+  }
+
+  .dropdown.menu .has-submenu.is-down-arrow > a::after {
+    border: 0;
+  }
+
+  .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after {
+    display: none;
+  }
+
+  .top-bar-right {
+    @include breakpoint(medium up) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .basket {
+      width: rem-calc(20);
+      height: rem-calc(20);
+      display: block;
+      @include breakpoint(large up) {
+        margin-left: rem-calc(110);
+      }
+
+      img {
+        max-width: 100%;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.site-navigation {
+  @include breakpoint(small only) {
+    padding: 0; // prevents container visibility on small screens
+  }
+}
+
+// WP post navigation
+.post-navigation {
+  @include clearfix;
+}
+
+.nav-previous {
+  float: left;
+}
+
+.nav-next {
+  float: right;
+}

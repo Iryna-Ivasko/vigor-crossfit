@@ -1,0 +1,150 @@
+.acf-map {
+  .location-info {
+    text-align: left;
+
+    &__title,
+    &__description,
+    &__schedule {
+      width: rem-calc(332);
+      max-width: 100%;
+    }
+
+    &__title {
+      font-size: rem-calc(26);
+      line-height: rem-calc(36);
+      font-weight: 600;
+      margin: rem-calc(4 0 13);
+      @include breakpoint(small down) {
+        font-size: rem-calc(18);
+        line-height: 1.2;
+      }
+    }
+
+    &__description {
+      font-size: rem-calc(16);
+      line-height: rem-calc(24);
+      margin-bottom: rem-calc(25);
+      @include breakpoint(small down) {
+        font-size: rem-calc(14);
+        line-height: 1.2;
+        margin-bottom: rem-calc(15);
+      }
+    }
+
+    &__schedule {
+      font-size: rem-calc(12);
+      line-height: rem-calc(24);
+      margin-bottom: rem-calc(19);
+      text-transform: uppercase;
+      @include breakpoint(small down) {
+        line-height: 1.2;
+        margin-bottom: rem-calc(10);
+      }
+    }
+
+    &__gallery {
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+
+      .img-wrapper {
+        position: relative;
+        margin: rem-calc(9);
+        transition: all 0.36s ease;
+        width: calc(100% / 4 - 18px);
+        @include breakpoint(small down) {
+          margin: rem-calc(2);
+          width: calc(100% / 4 - 4px);
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        .show-more {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          font-size: rem-calc(14);
+          font-weight: 600;
+          color: $white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.504289), rgba(0, 0, 0, 0.504289));
+          cursor: pointer;
+          @include breakpoint(small down) {
+            font-size: rem-calc(8);
+          }
+        }
+      }
+    }
+
+  }
+
+  height: rem-calc(878);
+  max-height: 80vw;
+  width: 100%;
+  @include breakpoint(small down){
+    max-height: rem-calc(400);
+  }
+
+
+  // google maps infowindow close button change styles
+  .gm-ui-hover-effect {
+    top: 5px !important;
+    right: 5px !important;
+    background-image: url("../img/infowindow-close.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: $white !important;
+    border-radius: 50px !important;
+    width: 10px !important;
+    height: 10px !important;
+    @include breakpoint(medium up) {
+      top: 20px !important;
+      right: 20px !important;
+      width: 20px !important;
+      height: 20px !important;
+    }
+
+    img {
+      display: none !important;
+    }
+  }
+
+  .gm-style {
+    .gm-style-iw-c {
+      border-radius: 0;
+      @include breakpoint(medium up) {
+        padding: rem-calc(14 20);
+        top: 50%;
+        left: rem-calc(30);
+        transform: translate(0, -50%);
+      }
+    }
+
+    .gm-style-iw-t {
+      @include breakpoint(medium up) {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.entry-title{
+  font-size: rem-calc(36);
+  font-weight: 600;
+  @include breakpoint(medium){
+    font-size: rem-calc(84);
+  }
+}

@@ -1,0 +1,30 @@
+.site-header {
+  background-color: $black;
+
+  &.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: transparent;
+  }
+
+  &__content {
+    @include grid-row();
+    padding: 0 rem-calc(10);
+    @include breakpoint(large) {
+      padding: 0 rem-calc(15);
+    }
+  }
+
+  .logo {
+    img {
+      max-height: rem-calc(84);
+      margin-bottom: rem-calc(12);
+      @include breakpoint(small down) {
+        max-height: rem-calc(42);
+      }
+    }
+  }
+}
